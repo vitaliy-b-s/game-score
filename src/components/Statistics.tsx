@@ -1,4 +1,5 @@
 import { statistics } from '../../public/data/statistics';
+
 function Statistics() {
   return (
     <div className="text-slate-200 bg-gray-950 p-5 rounded-xl fixed top-36">

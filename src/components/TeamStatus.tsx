@@ -3,6 +3,7 @@ import { TeamStatus } from '../types/TeamStatus';
 interface TeamStatusProps {
   status: TeamStatus;
 }
+
 function TeamStatusComponent({ status }: TeamStatusProps) {
   if (status === TeamStatus.DEFEAT) {
     return <div className="text-7xl animate-bleed">{TeamStatus.DEFEAT}</div>;

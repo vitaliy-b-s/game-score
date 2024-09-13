@@ -2,6 +2,7 @@ import { useState } from 'react';
 import team1 from '../../public/images/team1.jpg';
 import team2 from '../../public/images/team2.jpg';
 import Tooltip from './Tooltip';
+
 export interface Player {
   nickname: string;
   status: string;
@@ -10,6 +11,7 @@ export interface Player {
   deaths: number;
   team?: string;
 }
+
 function PlayerCard({ nickname, status, score, kills, deaths, team }: Player) {
   const [isTooltipShown, setIsTooltipShown] = useState<boolean>(false);
 
@@ -20,6 +22,7 @@ function PlayerCard({ nickname, status, score, kills, deaths, team }: Player) {
   const handleTooltipClose = () => {
     setIsTooltipShown(false);
   };
+
   return (
     <div
       className={`w-36 h-auto border-2 ${status === 'Dead' ? 'border-red-600' : 'border-green-600'} rounded-xl bg-gray-950 p-2 text-white cursor-pointer relative`}
